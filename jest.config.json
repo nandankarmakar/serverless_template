@@ -1,0 +1,43 @@
+{
+  "coverageDirectory":"../coverage",
+  "collectCoverage": true,
+  "coverageThreshold": {
+    "global":{
+      "branches":100,
+      "functions":100,
+      "lines":100,
+      "statements":100
+    }
+  },
+  "moduleNameMapper":{
+    "/opt/(.*)": "<rootDir>/__mocks__/$1"
+  },
+  "reporters": [
+    "default",
+    [
+      "jest-junit",
+      {
+        "outputDirectory": "reports"
+      }
+    ],
+    [
+      "jest-sonar",
+      {
+        "outputDirectory": "reports",
+        "outputName": "test-report.xml",
+        "reportedFilePath": "relative"
+      }
+    ]
+  ],
+  "verbose":true,
+  "rootDir":"src/",
+  "preset":"ts-jest",
+  "transform": {
+    "^.+\\.tsx?$":[
+      "ts-jest",
+      {
+        "isolatedModules": true
+      }
+    ]
+  }
+}

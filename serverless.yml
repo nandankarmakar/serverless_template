@@ -1,0 +1,33 @@
+service: serverless-api
+
+plugins:
+  - serverless-add-api-key
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: ${opt:stage, 'dev'}
+  region: ap-south-1
+
+custom:
+  apiKeys:
+    dev:
+      - name: anUsageKey
+        usagePlan:
+          name: "first-usage-plan"
+          description: "usage plan dsc"
+          quota:
+            limit: 1000
+            period: DAY
+          throttle:
+            burstLimit: 100
+            rateLimit: 20
+
+functions:
+  healthcheck:
+    handler: ./dist/handlers/healthcheck.postHandler
+    description: Healthcheck to ensure the service is up
+    events:
+      - http:
+          path: v1/healthcheck
+          method: post
