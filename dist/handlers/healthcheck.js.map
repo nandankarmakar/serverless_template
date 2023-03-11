@@ -1,1 +1,0 @@
-{"version":3,"file":"healthcheck.js","sourceRoot":"","sources":["../../src/handlers/healthcheck.ts"],"names":[],"mappings":";;;AAEO,MAAM,WAAW,GAAG,KAAK,EAAE,KAA2B,EAAkC,EAAE;IAC/F,MAAM,OAAO,GAAc,IAAI,CAAC,KAAK,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC;IAClD,OAAO;QACL,UAAU,EAAE,GAAG;QACf,IAAI,EAAE,SAAS,OAAO,CAAC,IAAI,EAAE;KAC9B,CAAC;AACJ,CAAC,CAAC;AANW,QAAA,WAAW,eAMtB"}
