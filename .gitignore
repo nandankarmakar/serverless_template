@@ -46,6 +46,6 @@ yarn-error.log*
 **/.build
 
 # Builds
-**/.dist
+**/dist
 
 
