@@ -1,0 +1,19 @@
+version: 2
+updates:
+  #maintain dependencies for npm
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule: 
+      interval: 'monthly'
+    labels:
+      - 'npm'
+      - 'dependencies'
+    commit-message:
+      # prefix all commit messages with npm
+      prefix: 'npm'
+    reviewers:
+      - 'nandankarmakar'
+    assignees:
+      - 'nandankarmakar'
+
+
