@@ -31,3 +31,4 @@ functions:
       - http:
           path: v1/healthcheck
           method: post
+          cors: true
